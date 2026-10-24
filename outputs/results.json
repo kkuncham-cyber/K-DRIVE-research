@@ -1,0 +1,237 @@
+{
+  "experiment": "synthetic controlled proof-of-concept, not field evidence",
+  "seed": 20261024,
+  "train_n": 3600,
+  "val_n": 1200,
+  "test_n": 1200,
+  "stress_n": 1500,
+  "readiness_prevalence_test": 0.6125,
+  "selected_model": "Logistic regression",
+  "validation_brier": {
+    "Logistic regression": 0.21469182372476672,
+    "Random forest": 0.21572464204609057,
+    "Gradient boosting": 0.2209180940182539
+  },
+  "predictive_test": {
+    "Logistic regression": {
+      "roc_auc": 0.698125960061444,
+      "average_precision": 0.7738999352817613,
+      "brier": 0.21097291360083079,
+      "precision": 0.6793478260869565,
+      "recall": 0.8503401360544217,
+      "f1": 0.7552870090634441
+    },
+    "Random forest": {
+      "roc_auc": 0.6793036354326677,
+      "average_precision": 0.754827447439763,
+      "brier": 0.21671107985021218,
+      "precision": 0.6648879402347919,
+      "recall": 0.8476190476190476,
+      "f1": 0.7452153110047847
+    },
+    "Gradient boosting": {
+      "roc_auc": 0.6698734547582472,
+      "average_precision": 0.744668316551246,
+      "brier": 0.21948725823888207,
+      "precision": 0.6775280898876405,
+      "recall": 0.8204081632653061,
+      "f1": 0.7421538461538462
+    }
+  },
+  "policy_test": {
+    "Score threshold": {
+      "mean_loss": 11.305,
+      "unsafe_launch_rate": 0.45166666666666666,
+      "launch_rate": 0.7666666666666667,
+      "pilot_rate": 0.0,
+      "defer_rate": 0.23333333333333334,
+      "total_unsafe_launches": 542
+    },
+    "Cost-aware (no rules)": {
+      "mean_loss": 6.620833333333334,
+      "unsafe_launch_rate": 0.050833333333333335,
+      "launch_rate": 0.18,
+      "pilot_rate": 0.46,
+      "defer_rate": 0.36,
+      "total_unsafe_launches": 61
+    },
+    "Knowledge rules only": {
+      "mean_loss": 7.1175,
+      "unsafe_launch_rate": 0.0,
+      "launch_rate": 0.3275,
+      "pilot_rate": 0.535,
+      "defer_rate": 0.1375,
+      "total_unsafe_launches": 0
+    },
+    "K-DRIVE": {
+      "mean_loss": 6.291666666666667,
+      "unsafe_launch_rate": 0.0,
+      "launch_rate": 0.12916666666666668,
+      "pilot_rate": 0.465,
+      "defer_rate": 0.4058333333333333,
+      "total_unsafe_launches": 0
+    }
+  },
+  "paired_95pct_bootstrap_ci_loss_diff_kdrive_minus_no_rules": [
+    -0.4841666666666667,
+    -0.19416666666666665
+  ],
+  "paired_95pct_bootstrap_ci_loss_diff_kdrive_minus_threshold": [
+    -5.569208333333333,
+    -4.464145833333333
+  ],
+  "stress_selected_model": {
+    "roc_auc": 0.6681424104732365,
+    "average_precision": 0.6176114005167548,
+    "brier": 0.23278506346701805,
+    "precision": 0.5485714285714286,
+    "recall": 0.7069219440353461,
+    "f1": 0.6177606177606177
+  },
+  "stress_policy": {
+    "Score threshold": {
+      "mean_loss": 12.4,
+      "unsafe_launch_rate": 0.5113333333333333,
+      "launch_rate": 0.5833333333333334,
+      "pilot_rate": 0.0,
+      "defer_rate": 0.4166666666666667,
+      "total_unsafe_launches": 767
+    },
+    "Cost-aware (no rules)": {
+      "mean_loss": 6.334666666666666,
+      "unsafe_launch_rate": 0.051333333333333335,
+      "launch_rate": 0.086,
+      "pilot_rate": 0.346,
+      "defer_rate": 0.568,
+      "total_unsafe_launches": 77
+    },
+    "Knowledge rules only": {
+      "mean_loss": 6.775333333333333,
+      "unsafe_launch_rate": 0.0,
+      "launch_rate": 0.07266666666666667,
+      "pilot_rate": 0.6046666666666667,
+      "defer_rate": 0.32266666666666666,
+      "total_unsafe_launches": 0
+    },
+    "K-DRIVE": {
+      "mean_loss": 5.816666666666666,
+      "unsafe_launch_rate": 0.0,
+      "launch_rate": 0.034666666666666665,
+      "pilot_rate": 0.3273333333333333,
+      "defer_rate": 0.638,
+      "total_unsafe_launches": 0
+    }
+  },
+  "penalty_sensitivity": [
+    {
+      "penalty": 0,
+      "policy_mean_loss": {
+        "Score threshold": 7.691666666666666,
+        "Cost-aware (no rules)": 6.214166666666666,
+        "Knowledge rules only": 7.1175,
+        "K-DRIVE": 6.291666666666667
+      },
+      "kdrive_minus_no_rules": 0.07750000000000057
+    },
+    {
+      "penalty": 1,
+      "policy_mean_loss": {
+        "Score threshold": 8.143333333333333,
+        "Cost-aware (no rules)": 6.265,
+        "Knowledge rules only": 7.1175,
+        "K-DRIVE": 6.291666666666667
+      },
+      "kdrive_minus_no_rules": 0.026666666666667282
+    },
+    {
+      "penalty": 2,
+      "policy_mean_loss": {
+        "Score threshold": 8.595,
+        "Cost-aware (no rules)": 6.315833333333333,
+        "Knowledge rules only": 7.1175,
+        "K-DRIVE": 6.291666666666667
+      },
+      "kdrive_minus_no_rules": -0.024166666666666003
+    },
+    {
+      "penalty": 4,
+      "policy_mean_loss": {
+        "Score threshold": 9.498333333333333,
+        "Cost-aware (no rules)": 6.4175,
+        "Knowledge rules only": 7.1175,
+        "K-DRIVE": 6.291666666666667
+      },
+      "kdrive_minus_no_rules": -0.12583333333333346
+    },
+    {
+      "penalty": 8,
+      "policy_mean_loss": {
+        "Score threshold": 11.305,
+        "Cost-aware (no rules)": 6.620833333333334,
+        "Knowledge rules only": 7.1175,
+        "K-DRIVE": 6.291666666666667
+      },
+      "kdrive_minus_no_rules": -0.3291666666666666
+    },
+    {
+      "penalty": 12,
+      "policy_mean_loss": {
+        "Score threshold": 13.111666666666666,
+        "Cost-aware (no rules)": 6.824166666666667,
+        "Knowledge rules only": 7.1175,
+        "K-DRIVE": 6.291666666666667
+      },
+      "kdrive_minus_no_rules": -0.5324999999999998
+    },
+    {
+      "penalty": 20,
+      "policy_mean_loss": {
+        "Score threshold": 16.725,
+        "Cost-aware (no rules)": 7.230833333333333,
+        "Knowledge rules only": 7.1175,
+        "K-DRIVE": 6.291666666666667
+      },
+      "kdrive_minus_no_rules": -0.939166666666666
+    }
+  ],
+  "threshold_sensitivity": [
+    {
+      "common_threshold_offset": -0.05,
+      "mean_loss_at_reference_costs": 6.415,
+      "reference_unsafe_launches": 20,
+      "launch_share": 0.14583333333333334
+    },
+    {
+      "common_threshold_offset": 0.0,
+      "mean_loss_at_reference_costs": 6.291666666666667,
+      "reference_unsafe_launches": 0,
+      "launch_share": 0.12916666666666668
+    },
+    {
+      "common_threshold_offset": 0.05,
+      "mean_loss_at_reference_costs": 6.3566666666666665,
+      "reference_unsafe_launches": 0,
+      "launch_share": 0.10583333333333333
+    }
+  ],
+  "cost_parameters": {
+    "launch_ready": 2,
+    "launch_not_ready": 22,
+    "pilot_ready": 6,
+    "pilot_not_ready": 9,
+    "defer_ready": 12,
+    "defer_not_ready": 1,
+    "noncompliant_launch_penalty": 8
+  },
+  "rules": {
+    "launch_min_data": 0.42,
+    "launch_min_cyber": 0.45,
+    "launch_min_investment": 0.38,
+    "pilot_min_investment": 0.28
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  }
+}

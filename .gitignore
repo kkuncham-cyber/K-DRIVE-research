@@ -1,0 +1,15 @@
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+# Generated large intermediate outputs (regenerate via scripts)
+outputs/synthetic_enterprise_records.csv
+outputs/stress_synthetic_records.csv
+outputs/figure_1_predictive_validation.*
+outputs/figure_1_real_survey.pdf
+outputs/figure_2_policy_validation.pdf
+outputs/graphical_abstract.pdf
+outputs/simulation_console.txt
+outputs/empirical_console.txt

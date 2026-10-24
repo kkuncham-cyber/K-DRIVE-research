@@ -1,0 +1,60 @@
+{
+  "data_origin": "Clim 2026 open anonymized respondent survey (not enterprise outcome records)",
+  "target": "investment intention considering_it or yes_definitely (NOT realized investment)",
+  "n": 306,
+  "n_train": 229,
+  "n_test": 77,
+  "n_student": 174,
+  "positive_n": 148,
+  "selected_by_5fold_train_brier": "Gradient boosting",
+  "cv_brier": {
+    "Prevalence-only": 0.2498090480970247,
+    "Logistic regression": 0.2032311047885514,
+    "Random forest": 0.19850258946857324,
+    "Gradient boosting": 0.19806017793708144
+  },
+  "heldout": {
+    "Prevalence-only": {
+      "roc_auc": 0.5,
+      "average_precision": 0.4805194805194805,
+      "brier": 0.24963812145597394,
+      "f1": 0.0,
+      "balanced_accuracy": 0.5
+    },
+    "Logistic regression": {
+      "roc_auc": 0.6635135135135134,
+      "average_precision": 0.7153566147076649,
+      "brier": 0.2338906005163454,
+      "f1": 0.64,
+      "balanced_accuracy": 0.6493243243243243
+    },
+    "Random forest": {
+      "roc_auc": 0.6972972972972973,
+      "average_precision": 0.709505742408872,
+      "brier": 0.21943008168770622,
+      "f1": 0.6944444444444444,
+      "balanced_accuracy": 0.7128378378378378
+    },
+    "Gradient boosting": {
+      "roc_auc": 0.7195945945945947,
+      "average_precision": 0.7335031097512332,
+      "brier": 0.21527185680645888,
+      "f1": 0.6301369863013698,
+      "balanced_accuracy": 0.6483108108108109
+    }
+  },
+  "selected_auc_bootstrap_95ci": [
+    0.5929618925731366,
+    0.8277085157019367
+  ],
+  "selected_ap_bootstrap_95ci": [
+    0.5835495452700638,
+    0.8617407795105235
+  ],
+  "test_positive_n": 37,
+  "selected_recommend_invest": 13,
+  "selected_recommend_pilot": 23,
+  "selected_monitor": 41,
+  "test_nonstudent_n": 35,
+  "conditional_rule_override_n": 23
+}

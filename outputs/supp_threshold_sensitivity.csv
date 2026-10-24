@@ -1,0 +1,6 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: supp_threshold_sensitivity.csv>
+index,common_threshold_offset,mean_loss_at_reference_costs,reference_unsafe_launches,launch_share
+0,-0.05,6.415,20,0.1458333333333333
+1,0.0,6.291666666666667,0,0.1291666666666666
+2,0.05,6.3566666666666665,0,0.1058333333333333
